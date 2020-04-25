@@ -18,7 +18,7 @@ public class BuilderMain {
         Long startTimeCB = System.nanoTime();
         CarBuilder carBuilder;
         CarEngineer carEngineer = new CarEngineer();
-        ArrayList<Builder.Entities.Car> carBuilderObj = new ArrayList<>();
+        ArrayList<Builder.Entities.Car> carBuilderObj = new ArrayList<Builder.Entities.Car>();
         for (int i = 0; i < 1000; i++) {
             Random randomFactory = new Random();
             String[] typeArr = {"bmw", "audi"};
@@ -44,7 +44,7 @@ public class BuilderMain {
 
         //CarFactoryAbstract
         Long startTimeCFA = System.nanoTime();
-        ArrayList<Car> carAbstractFacObj = new ArrayList<>();
+        ArrayList<Car> carAbstractFacObj = new ArrayList<Car>();
         for (int i = 0; i < 1000; i++) {
             Car car;
             Random randomFactory = new Random();
