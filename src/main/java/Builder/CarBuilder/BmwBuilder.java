@@ -11,18 +11,16 @@ public class BmwBuilder implements CarBuilder {
     public BmwBuilder() {
         this.car = new Car();
     }
+
     @Override
     public void buildBody() {
         Body body = new Body();
-
         car.setBody(body);
-
     }
 
     @Override
     public void buildEngine() {
         Engine engine = new Engine();
-
         car.setEngine(engine);
     }
 

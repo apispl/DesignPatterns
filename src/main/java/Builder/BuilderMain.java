@@ -7,6 +7,8 @@ import Builder.CarBuilder.CarEngineer;
 import Builder.CarFactoryAbstract.AudiFactory;
 import Builder.CarFactoryAbstract.BMWfactory;
 import Builder.CarFactoryAbstract.Car;
+import Builder.Entities.Body;
+import Builder.Entities.Engine;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -28,12 +30,10 @@ public class BuilderMain {
                 carBuilder = new AudiBuilder();
                 carEngineer.produceCar(carBuilder);
                 car = carBuilder.getCar();
-
             } else {
                 carBuilder = new BmwBuilder();
                 carEngineer.produceCar(carBuilder);
                 car = carBuilder.getCar();
-
             }
             carBuilderObj.add(car);
         }
@@ -63,5 +63,16 @@ public class BuilderMain {
         Long endTimeCFA = System.nanoTime();
         long carAbstractFacTime = (endTimeCFA - startTimeCFA);
         System.out.println(carAbstractFacTime);
+
+        //FluentCarBuilder
+        FluentCar fluentCar = new FluentCar.FluentBuilder()
+                .name("My fast car")
+                .producent("Ferrari")
+                .serialNumber(3910472)
+                .engine(new Engine())
+                .body(new Body())
+                .build();
+
+        System.out.println(fluentCar.toString());
     }
 }

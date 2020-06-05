@@ -18,7 +18,6 @@ public class AudiBuilder implements CarBuilder {
         body.setSize(1);
         body.setType("racing");
         car.setBody(body);
-
     }
 
     @Override

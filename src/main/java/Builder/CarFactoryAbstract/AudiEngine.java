@@ -19,6 +19,7 @@ public class AudiEngine implements Engine {
     public void setType(String type) {
         this.type = type;
     }
+
     @Override
     public void assembly() {
         System.out.println("Montuję silnik Audi...");

@@ -3,8 +3,9 @@ package Builder.CarBuilder;
 import Builder.Entities.Car;
 
 public interface CarBuilder {
-    public void buildBody();
-    public void buildEngine();
+    void buildBody();
 
-    public Car getCar();
+    void buildEngine();
+
+    Car getCar();
 }

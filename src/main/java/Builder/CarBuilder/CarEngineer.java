@@ -12,12 +12,12 @@ public class CarEngineer {
         this.carBuilder = carBuilder;
     }
 
-    public void produceCar(CarBuilder carBuilder){
+    public void produceCar(CarBuilder carBuilder) {
         carBuilder.buildBody();
         carBuilder.buildEngine();
     }
 
-    public Car getCar(){
+    public Car getCar() {
         return this.carBuilder.getCar();
     }
 }
